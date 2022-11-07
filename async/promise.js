@@ -1,12 +1,17 @@
-function fetchUsername() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('JSUser');
-        }, 3000);
-    })
+
+const eksekusi = (resolve, reject) => {
+    let mechine = false;
+
+    if (mechine) {
+        resolve("kopi teh berhasil dibuat");
+    } else {
+        reject("maap gan, rusak ey");
+    }
 }
 
-console.log("Fetching username...");
-const username = fetchUsername();
-console.log(`You are logged in as ${username}`);
-console.log("Welcome!");
+const makeCoffee = () => {
+    return new Promise(eksekusi);
+}
+
+const kopi = makeCoffee()
+console.log(kopi);
